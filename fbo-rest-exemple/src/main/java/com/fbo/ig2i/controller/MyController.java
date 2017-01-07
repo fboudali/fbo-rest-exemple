@@ -1,41 +1,55 @@
 package com.fbo.ig2i.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fbo.ig2i.entity.Person;
 import com.fbo.ig2i.repo.PersonRepository;
 
 /**
  * @author Fahd BOUDALI
  *
- * @see @RestController <br/>to return json
+ * @see @RestController <br/>
+ *      to return json
  */
-@Controller
+@RestController
+@RequestMapping("/poeple")
 public class MyController {
 
 	/**
 	 * Default html
 	 */
-	private static final String WELCOME_HTML = "welcome";
 
 	@Autowired
 	PersonRepository personRepo;
 
-	/**
-	 * @param numba1
-	 * @param numba2
-	 * @param model
-	 * @return
-	 */
-	@RequestMapping(value = "/addition/{numba1}/{numba2}", method = RequestMethod.GET)
-	public String addition(@PathVariable int numba1, @PathVariable int numba2, Model model) {
+	@RequestMapping(method = GET)
+	public List<Person> showAll() {
 
-		model.addAttribute("result", numba1 + numba2);
-		return WELCOME_HTML;
+		List<Person> persons = (List<Person>) personRepo.findAll();
+		return persons;
+
+	}
+
+	@RequestMapping(method = POST)
+	public Person addition(Person person) {
+
+		return personRepo.save(person);
+
+	}
+
+	@RequestMapping(method = DELETE)
+	public void removePerson(Person person) {
+
+		personRepo.delete(person);
+
 	}
 
 }
