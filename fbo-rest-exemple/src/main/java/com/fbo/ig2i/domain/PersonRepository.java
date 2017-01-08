@@ -1,12 +1,10 @@
-package com.fbo.ig2i.repo;
+package com.fbo.ig2i.domain;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-
-import com.fbo.ig2i.entity.Person;
 
 /**
  * @author Fahd BOUDALI

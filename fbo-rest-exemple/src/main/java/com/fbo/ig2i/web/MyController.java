@@ -1,8 +1,9 @@
-package com.fbo.ig2i.controller;
+package com.fbo.ig2i.web;
 
 import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
-import static org.springframework.web.bind.annotation.RequestMethod.GET;import static org.springframework.web.bind.annotation.RequestMethod.PUT;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
+import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 
 import java.util.List;
 
@@ -10,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fbo.ig2i.entity.Person;
-import com.fbo.ig2i.repo.PersonRepository;
+import com.fbo.ig2i.domain.Person;
+import com.fbo.ig2i.service.PersonService;
 
 /**
  * @author Fahd BOUDALI
@@ -28,12 +29,12 @@ public class MyController {
 	 */
 
 	@Autowired
-	PersonRepository personRepo;
+	PersonService personService;
 
 	@RequestMapping(method = GET)
 	public List<Person> showAll() {
 
-		List<Person> persons = (List<Person>) personRepo.findAll();
+		List<Person> persons = (List<Person>) personService.showAll();
 		return persons;
 
 	}
@@ -41,23 +42,21 @@ public class MyController {
 	@RequestMapping(method = POST)
 	public Person createNew(Person person) {
 
-		return personRepo.save(person);
+		return personService.createNew(person);
 
 	}
-	
 
 	@RequestMapping(method = PUT)
 	public Person update(Person person) {
 
-		return personRepo.save(person);
+		return personService.update(person);
 
 	}
-	
 
 	@RequestMapping(method = DELETE)
 	public void removePerson(Person person) {
 
-		personRepo.delete(person);
+		personService.removePerson(person);
 
 	}
 

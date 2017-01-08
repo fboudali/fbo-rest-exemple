@@ -4,16 +4,16 @@ import javax.ws.rs.core.Application;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.ConfigurableApplicationContext;
 
-import com.fbo.ig2i.entity.Person;
-import com.fbo.ig2i.repo.PersonRepository;
+import com.fbo.ig2i.domain.Person;
+import com.fbo.ig2i.domain.PersonRepository;
 
 /**
  * Person's repository
+ * 
  * @author Fahd BOUDALI
  *
  */
@@ -25,30 +25,22 @@ public class RestApplication {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(RestApplication.class, args);
+		ConfigurableApplicationContext runner = SpringApplication.run(RestApplication.class, args);
+		embeddedDataPreInsertion(runner);
+
 	}
 
 	/**
-	 * @param repository
-	 * @return
+	 * Insert some poeple in DB
+	 * 
+	 * @param runner
 	 */
-	@Bean
-	public CommandLineRunner demo(final PersonRepository repository) {
-
-		return  new CommandLineRunner() {
-
-			@Override
-			public void run(String... arg0) throws Exception {
-				//Putting some Poeple in it 
-				log.info("Putting some Poeple in it ");
-				repository.save(new Person("Fahd", "Boudali"));
-				repository.save(new Person("John", "Doe"));
-				repository.save(new Person("Vic", "Mackey"));
-
-			};
-		};
-
-
+	private static void embeddedDataPreInsertion(ConfigurableApplicationContext runner) {
+		log.info("Inserting some poeple");
+		PersonRepository repository = runner.getBean(PersonRepository.class);
+		repository.save(new Person("Fahd", "Boudali"));
+		repository.save(new Person("John", "Doe"));
+		repository.save(new Person("Vic", "Mackey"));
 	}
 
 }
