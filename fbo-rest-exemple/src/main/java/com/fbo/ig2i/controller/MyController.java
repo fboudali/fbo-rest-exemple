@@ -1,7 +1,7 @@
 package com.fbo.ig2i.controller;
 
 import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 import java.util.List;
@@ -39,11 +39,20 @@ public class MyController {
 	}
 
 	@RequestMapping(method = POST)
-	public Person addition(Person person) {
+	public Person createNew(Person person) {
 
 		return personRepo.save(person);
 
 	}
+	
+
+	@RequestMapping(method = PUT)
+	public Person update(Person person) {
+
+		return personRepo.save(person);
+
+	}
+	
 
 	@RequestMapping(method = DELETE)
 	public void removePerson(Person person) {

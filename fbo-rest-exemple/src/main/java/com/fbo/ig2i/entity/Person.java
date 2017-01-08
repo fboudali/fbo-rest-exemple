@@ -3,15 +3,12 @@
  */
 package com.fbo.ig2i.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 /**
  * @author Fahd BOUDALI
@@ -22,6 +19,15 @@ public class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+
+	private String firstName;
+	private String lastName;
+	
+	private Date lastUpdateDate;
+
+	public Person() {
+		super();
+	}
 
 	public long getId() {
 		return id;
@@ -35,7 +41,9 @@ public class Person {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.lastUpdateDate=new Date();
 	}
+
 
 	public String getFirstName() {
 		return firstName;
@@ -53,11 +61,12 @@ public class Person {
 		this.lastName = lastName;
 	}
 
-	private String firstName;
-	private String lastName;
+	public Date getLastUpdateDate() {
+		return lastUpdateDate;
+	}
 
-	public Person() {
-		super();
+	public void setLastUpdateDate(Date lastUpdateDate) {
+		this.lastUpdateDate = lastUpdateDate;
 	}
 
 
