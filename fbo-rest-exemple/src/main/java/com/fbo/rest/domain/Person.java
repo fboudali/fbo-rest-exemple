@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.fbo.ig2i.domain;
+package com.fbo.rest.domain;
 
 import java.util.Date;
 

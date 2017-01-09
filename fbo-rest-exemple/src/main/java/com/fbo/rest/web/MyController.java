@@ -1,4 +1,4 @@
-package com.fbo.ig2i.web;
+package com.fbo.rest.web;
 
 import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fbo.ig2i.domain.Person;
-import com.fbo.ig2i.service.PersonService;
+import com.fbo.rest.domain.Person;
+import com.fbo.rest.service.PersonService;
 
 /**
  * @author Fahd BOUDALI

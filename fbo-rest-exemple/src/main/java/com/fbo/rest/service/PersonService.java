@@ -1,15 +1,15 @@
 /**
  * 
  */
-package com.fbo.ig2i.service;
+package com.fbo.rest.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fbo.ig2i.domain.Person;
-import com.fbo.ig2i.domain.PersonRepository;
+import com.fbo.rest.domain.Person;
+import com.fbo.rest.domain.PersonRepository;
 
 /**
  * @author FBO

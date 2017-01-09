@@ -1,4 +1,4 @@
-package com.fbo.ig2i;
+package com.fbo.rest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
