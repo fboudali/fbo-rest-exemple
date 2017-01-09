@@ -18,13 +18,16 @@ import com.fbo.ig2i.domain.PersonRepository;
  *
  */
 @SpringBootApplication
+// same as @Configuration @EnableAutoConfiguration @ComponentScan
 public class RestApplication {
-	private static final Logger log = LoggerFactory.getLogger(Application.class);
+	/** LOGGER */
+	private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		// System.setProperty("spring.devtools.restart.enabled", "false");
 		ConfigurableApplicationContext runner = SpringApplication.run(RestApplication.class, args);
 		embeddedDataPreInsertion(runner);
 
@@ -36,7 +39,7 @@ public class RestApplication {
 	 * @param runner
 	 */
 	private static void embeddedDataPreInsertion(ConfigurableApplicationContext runner) {
-		log.info("Inserting some poeple");
+		LOGGER.info("Inserting some poeple");
 		PersonRepository repository = runner.getBean(PersonRepository.class);
 		repository.save(new Person("Fahd", "Boudali"));
 		repository.save(new Person("John", "Doe"));

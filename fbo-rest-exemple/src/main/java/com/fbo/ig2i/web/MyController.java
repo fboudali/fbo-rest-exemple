@@ -17,8 +17,6 @@ import com.fbo.ig2i.service.PersonService;
 /**
  * @author Fahd BOUDALI
  *
- * @see @RestController <br/>
- *      to return json
  */
 @RestController
 @RequestMapping("/poeple")
@@ -31,6 +29,9 @@ public class MyController {
 	@Autowired
 	PersonService personService;
 
+	/**
+	 * @return
+	 */
 	@RequestMapping(method = GET)
 	public List<Person> showAll() {
 
@@ -39,6 +40,10 @@ public class MyController {
 
 	}
 
+	/**
+	 * @param person
+	 * @return
+	 */
 	@RequestMapping(method = POST)
 	public Person createNew(Person person) {
 
@@ -46,6 +51,10 @@ public class MyController {
 
 	}
 
+	/**
+	 * @param person
+	 * @return
+	 */
 	@RequestMapping(method = PUT)
 	public Person update(Person person) {
 
@@ -53,6 +62,9 @@ public class MyController {
 
 	}
 
+	/**
+	 * @param person
+	 */
 	@RequestMapping(method = DELETE)
 	public void removePerson(Person person) {
 

@@ -18,8 +18,16 @@ import com.fbo.ig2i.domain.PersonRepository;
 @Service
 public class PersonService {
 
+	private final PersonRepository personRepo;
+
+	/**
+	 * @param personRepo
+	 */
 	@Autowired
-	PersonRepository personRepo;
+	public PersonService(PersonRepository personRepo) {
+		super();
+		this.personRepo = personRepo;
+	}
 
 	/**
 	 * @return
@@ -39,7 +47,6 @@ public class PersonService {
 		return personRepo.save(person);
 
 	}
-	
 
 	/**
 	 * @param person
@@ -50,7 +57,6 @@ public class PersonService {
 		return personRepo.save(person);
 
 	}
-	
 
 	/**
 	 * @param person
