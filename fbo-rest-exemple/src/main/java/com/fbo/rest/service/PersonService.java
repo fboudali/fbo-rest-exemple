@@ -17,14 +17,14 @@ import com.fbo.rest.domain.PersonRepository;
  */
 @Service
 public class PersonService {
-
+ 
 	private final PersonRepository personRepo;
 
 	/**
 	 * @param personRepo
 	 */
 	@Autowired
-	public PersonService(PersonRepository personRepo) {
+	public PersonService(final PersonRepository personRepo) {
 		super();
 		this.personRepo = personRepo;
 	}
@@ -42,7 +42,7 @@ public class PersonService {
 	 * @param person
 	 * @return
 	 */
-	public Person createNew(Person person) {
+	public Person createNew(final Person person) {
 
 		return personRepo.save(person);
 
@@ -52,7 +52,7 @@ public class PersonService {
 	 * @param person
 	 * @return
 	 */
-	public Person update(Person person) {
+	public Person update(final Person person) {
 
 		return personRepo.save(person);
 
@@ -61,7 +61,7 @@ public class PersonService {
 	/**
 	 * @param person
 	 */
-	public void removePerson(Person person) {
+	public void removePerson(final Person person) {
 
 		personRepo.delete(person);
 

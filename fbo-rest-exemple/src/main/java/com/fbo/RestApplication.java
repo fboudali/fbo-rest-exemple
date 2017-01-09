@@ -26,9 +26,9 @@ public class RestApplication {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		// System.setProperty("spring.devtools.restart.enabled", "false");
-		ConfigurableApplicationContext runner = SpringApplication.run(RestApplication.class, args);
+		final ConfigurableApplicationContext runner = SpringApplication.run(RestApplication.class, args);
 		embeddedDataPreInsertion(runner);
 
 	}
@@ -37,10 +37,10 @@ public class RestApplication {
 	 * Insert some poeple in DB
 	 * 
 	 * @param runner
-	 */
-	private static void embeddedDataPreInsertion(ConfigurableApplicationContext runner) {
+	 */ 
+	private static void embeddedDataPreInsertion(final ConfigurableApplicationContext runner) {
 		LOGGER.info("Inserting some poeple");
-		PersonRepository repository = runner.getBean(PersonRepository.class);
+		final PersonRepository repository = runner.getBean(PersonRepository.class);
 		repository.save(new Person("Fahd", "Boudali"));
 		repository.save(new Person("John", "Doe"));
 		repository.save(new Person("Vic", "Mackey"));

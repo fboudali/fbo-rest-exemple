@@ -16,7 +16,7 @@ import javax.persistence.Id;
  */
 @Entity
 public class Person {
-	@Id
+	@Id 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
@@ -33,11 +33,11 @@ public class Person {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(final long id) {
 		this.id = id;
 	}
 
-	public Person(String firstName, String lastName) {
+	public Person(final String firstName, final String lastName) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -49,7 +49,7 @@ public class Person {
 		return firstName;
 	}
 
-	public void setFirstName(String firstName) {
+	public void setFirstName(final String firstName) {
 		this.firstName = firstName;
 	}
 
@@ -57,7 +57,7 @@ public class Person {
 		return lastName;
 	}
 
-	public void setLastName(String lastName) {
+	public void setLastName(final String lastName) {
 		this.lastName = lastName;
 	}
 
@@ -65,7 +65,7 @@ public class Person {
 		return lastUpdateDate;
 	}
 
-	public void setLastUpdateDate(Date lastUpdateDate) {
+	public void setLastUpdateDate(final Date lastUpdateDate) {
 		this.lastUpdateDate = lastUpdateDate;
 	}
 

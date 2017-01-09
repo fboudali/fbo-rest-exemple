@@ -20,7 +20,7 @@ import com.fbo.rest.service.PersonService;
  */
 @RestController
 @RequestMapping("/poeple")
-public class MyController {
+public class MyController { 
 
 	/**
 	 * Default html
@@ -35,7 +35,7 @@ public class MyController {
 	@RequestMapping(method = GET)
 	public List<Person> showAll() {
 
-		List<Person> persons = (List<Person>) personService.showAll();
+		final List<Person> persons = personService.showAll();
 		return persons;
 
 	}
@@ -45,7 +45,7 @@ public class MyController {
 	 * @return
 	 */
 	@RequestMapping(method = POST)
-	public Person createNew(Person person) {
+	public Person createNew(final Person person) {
 
 		return personService.createNew(person);
 
@@ -56,7 +56,7 @@ public class MyController {
 	 * @return
 	 */
 	@RequestMapping(method = PUT)
-	public Person update(Person person) {
+	public Person update(final Person person) {
 
 		return personService.update(person);
 
@@ -66,7 +66,7 @@ public class MyController {
 	 * @param person
 	 */
 	@RequestMapping(method = DELETE)
-	public void removePerson(Person person) {
+	public void removePerson(final Person person) {
 
 		personService.removePerson(person);
 
