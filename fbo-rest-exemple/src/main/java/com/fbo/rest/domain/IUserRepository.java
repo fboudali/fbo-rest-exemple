@@ -2,6 +2,7 @@ package com.fbo.rest.domain;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -11,15 +12,26 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  *
  */
 @RepositoryRestResource(collectionResourceRel = "people", path = "people")
-public interface PersonRepository extends CrudRepository<Person, Long> {
+public interface IUserRepository extends CrudRepository<User, Long> {
 
-	/** 
+	/**
 	 * Find person by his/her name
 	 * 
 	 * @param name
 	 * @return
 	 */
-	List<Person> findByLastName(@Param("name") String name);
+	List<User> findByLastName(@Param("name") String name);
 
+	
+	/**
+	 * @return
+	 */
+	@Query("select u from User u where u.email=?#{principal.email}")
+	User findCurrentUser();
+	/**
+	 * @param username
+	 * @return
+	 */
+	User findByEmail(@Param("username") String username);
 
 }

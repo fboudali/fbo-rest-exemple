@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fbo.rest.domain.Person;
-import com.fbo.rest.service.PersonService;
+import com.fbo.rest.domain.User;
+import com.fbo.rest.service.UserService;
 
 /**
  * @author Fahd BOUDALI
@@ -20,55 +20,55 @@ import com.fbo.rest.service.PersonService;
  */
 @RestController
 @RequestMapping("/poeple")
-public class MyController { 
+public class MyController {
 
 	/**
 	 * Default html
 	 */
 
 	@Autowired
-	PersonService personService;
+	UserService userService;
 
 	/**
 	 * @return
 	 */
 	@RequestMapping(method = GET)
-	public List<Person> showAll() {
+	public List<User> showAll() {
 
-		final List<Person> persons = personService.showAll();
-		return persons;
+		final List<User> users = userService.showAll();
+		return users;
 
 	}
 
 	/**
-	 * @param person
+	 * @param user
 	 * @return
 	 */
 	@RequestMapping(method = POST)
-	public Person createNew(final Person person) {
+	public User createNew(final User user) {
 
-		return personService.createNew(person);
+		return userService.createNew(user);
 
 	}
 
 	/**
-	 * @param person
+	 * @param user
 	 * @return
 	 */
 	@RequestMapping(method = PUT)
-	public Person update(final Person person) {
+	public User update(final User user) {
 
-		return personService.update(person);
+		return userService.update(user);
 
 	}
 
 	/**
-	 * @param person
+	 * @param user
 	 */
 	@RequestMapping(method = DELETE)
-	public void removePerson(final Person person) {
+	public void removeUser(final User user) {
 
-		personService.removePerson(person);
+		userService.removeUser(user);
 
 	}
 

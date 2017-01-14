@@ -1,7 +1,5 @@
 package com.fbo.rest.web;
 
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,17 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @Controller
-@RequestMapping("/login")
 public class LoginController {
-
-	/**
-	 * @return
-	 */
-	@RequestMapping(method = GET)
-	public String showLoginPage() {
-		System.out.println("oui");
+	@RequestMapping("/login")
+	public String login() {
 		return "login";
-
 	}
-
 }
