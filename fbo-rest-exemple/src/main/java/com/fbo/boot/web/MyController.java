@@ -1,4 +1,4 @@
-package com.fbo.rest.web;
+package com.fbo.boot.web;
 
 import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fbo.rest.domain.User;
-import com.fbo.rest.service.UserService;
+import com.fbo.boot.domain.User;
+import com.fbo.boot.service.UserService;
 
 /**
  * @author Fahd BOUDALI

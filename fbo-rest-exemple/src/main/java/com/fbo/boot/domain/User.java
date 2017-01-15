@@ -1,4 +1,4 @@
-package com.fbo.rest.domain;
+package com.fbo.boot.domain;
 
 import static javax.persistence.GenerationType.AUTO;
 

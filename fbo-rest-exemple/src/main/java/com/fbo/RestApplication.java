@@ -8,8 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.fbo.rest.domain.IUserRepository;
-import com.fbo.rest.domain.User;
+import com.fbo.boot.domain.IUserRepository;
+import com.fbo.boot.domain.User;
 
 /**
  * User's repository

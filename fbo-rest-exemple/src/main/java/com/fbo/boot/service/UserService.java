@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.fbo.rest.service;
+package com.fbo.boot.service;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,8 +14,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.fbo.rest.domain.IUserRepository;
-import com.fbo.rest.domain.User;
+import com.fbo.boot.domain.IUserRepository;
+import com.fbo.boot.domain.User;
 
 /**
  * @author FBO
