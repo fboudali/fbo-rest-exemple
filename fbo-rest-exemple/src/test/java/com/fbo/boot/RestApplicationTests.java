@@ -13,12 +13,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * @author Fahd BOUDALI
- *
+ * @see {@link https://spring.io/blog/2016/04/15/testing-improvements-in-spring-boot-1-4}
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RestApplicationTests {
- 
+
 	@Before
 	public void setup() {
 
@@ -33,6 +33,7 @@ public class RestApplicationTests {
 	/**
 	 * 
 	 */
+
 	@Test
 	public void contextLoads() {
 	}
