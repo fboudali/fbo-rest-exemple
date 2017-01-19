@@ -1,0 +1,24 @@
+insert into user(id,email,password,first_name,last_name) values (1,'fboudali1@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (2,'fboudali2@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (3,'fboudali3@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (4,'fboudali4@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (5,'fboudali5@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (6,'fboudali6@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (7,'fboudali7@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (8,'fboudali8@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (9,'fboudali9@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (10,'fboudali10@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (11,'fboudali11@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (12,'fboudali12@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (13,'fboudali13@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (14,'fboudali14@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (15,'fboudali15@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (16,'fboudali16@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (17,'fboudali17@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (18,'fboudali18@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (19,'fboudali19@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (20,'fboudali20@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (21,'fboudali21@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (22,'fboudali22@example.com','password','Fahd','BOUDALI');
+insert into user(id,email,password,first_name,last_name) values (23,'fboudali23@example.com','password','Fahd','BOUDALI');
+                                                                 

@@ -1,0 +1,11 @@
+com\fbo\boot\domain\User.class
+com\fbo\boot\web\SignupController.class
+com\fbo\boot\service\UserService$CustomUserDetails.class
+com\fbo\boot\service\UserService.class
+com\fbo\boot\service\UserService$1.class
+com\fbo\security\WebSecurityConfig.class
+com\fbo\RestApplication.class
+com\fbo\boot\domain\CurrentUser.class
+com\fbo\boot\domain\IUserRepository.class
+com\fbo\boot\web\LoginController.class
+com\fbo\boot\web\MyController.class

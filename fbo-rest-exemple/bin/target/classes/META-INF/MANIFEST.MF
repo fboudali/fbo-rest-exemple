@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: fbo-rest-exemple
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: BFejjal
+Implementation-Vendor-Id: com.fbo.ig2i
+Build-Jdk: 1.8.0_91
+Implementation-URL: http://projects.spring.io/spring-boot/fbo-rest-exe
+ mple/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
