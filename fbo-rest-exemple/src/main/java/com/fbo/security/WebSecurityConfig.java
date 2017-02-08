@@ -39,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 		auth.userDetailsService(customuserService).passwordEncoder(new BCryptPasswordEncoder());
 	}
+	// @formatter:on
 
 	/**
 	 * Override this method to configure the {@link HttpSecurity}. Typically
@@ -55,12 +56,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	 *             if an error occurs
 	 */
 	// @formatter:off
+	
 	@Override
 	protected void configure(final HttpSecurity http) throws Exception {
 
 		http
-		.authorizeRequests().antMatchers("/resources/**").permitAll().anyRequest().authenticated().and().formLogin()
-				.loginPage("/login").permitAll().and().logout().permitAll();
+		.authorizeRequests()
+			.antMatchers("/resources/**").permitAll()
+			.antMatchers("/signup").permitAll()
+			.anyRequest().authenticated()
+				.and().formLogin()
+			.loginPage("/login").permitAll().and().logout().permitAll();
 	}
+	// @formatter:on
 
 }

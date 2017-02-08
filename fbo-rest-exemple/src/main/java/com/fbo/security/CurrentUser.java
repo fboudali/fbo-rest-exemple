@@ -1,4 +1,4 @@
-package com.fbo.boot.domain;
+package com.fbo.security;
 
 import static java.lang.annotation.ElementType.PARAMETER;
 
